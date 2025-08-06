@@ -4,16 +4,16 @@ The system is designed to be fully automated, culminating in a deployment as a s
 
 ## Core Features
 - **Multi-Source Risk Assessment**: Ingests and analyzes data from three independent sources to avoid single-point-of-failure conclusions:
-  1. Official Government Flood Zone Maps (.gpkg) (In this case Quebec "Carte Geo Inondation) 
-  2. Topographical Vulnerability via Height Above Nearest Drainage (HAND) model from Google Earth Engine.
-  3. Modeled Flood Susceptibility Index (FSI) from the Canadian Federal Government (.tif).
+1. Official Government Flood Zone Maps (.gpkg) (In this case Quebec "Carte Geo Inondation) 
+2. Topographical Vulnerability via Height Above Nearest Drainage (HAND) model from Google Earth Engine.
+3. Modeled Flood Susceptibility Index (FSI) from the Canadian Federal Government (.tif).
 
 - **Hyper-Local Vulnerability Analysis**: Instead of just confirming if an address is in a flood zone, it calculates the specific vertical distance from the property to the nearest drainage channel (HAND), offering a granular view of its real-world vulnerability.
 
 - **Real-Time Threat Monitoring**: Once a property is assessed, the system automatically fetches live, up-to-the-minute data from Environment Canada, including:
-  1. Official weather warnings and alerts.
-  2. Real-time water levels and flow rates from the nearest hydrometric station.
-  3. Live precipitation radar maps.
+1. Official weather warnings and alerts.
+2. Real-time water levels and flow rates from the nearest hydrometric station.
+3. Live precipitation radar maps.
      
 - **Automated Reporting & Deployment**:
   The entire workflow can be packaged into a script deployed as a Google Cloud Function. It can be triggered by a scheduler to run automatically, generating a consolidated risk report and emailing it to a user via the SendGrid API.
