@@ -3,7 +3,7 @@ This project is a multi-layered geospatial application designed to provide a com
 The system is designed to be fully automated, culminating in a deployment as a serverless cloud function that can generate daily advisories, demonstrating a complete end-to-end data engineering and analysis workflow.
 
 ## Core Features
-- # Multi-Source Risk Assessment:
+- **Multi-Source Risk Assessment**:
   Ingests and analyzes data from three independent sources to avoid single-point-of-failure conclusions:
   1. Official Government Flood Zone Maps (.gpkg) (In this case Quebec "Carte Geo Inondation) 
   2. Topographical Vulnerability via Height Above Nearest Drainage (HAND) model from Google Earth Engine.
