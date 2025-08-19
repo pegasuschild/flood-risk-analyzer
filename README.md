@@ -2,6 +2,11 @@
 This project is a multi-layered geospatial application designed to provide a comprehensive and highly detailed flood risk assessment for any given address. Moving beyond simple map lookups, it integrates multiple independent data sources—including government flood plains, topographical vulnerability models, and federal susceptibility indexes—to create a robust, evidence-based risk profile.
 The system is designed to be fully automated, culminating in a deployment as a serverless cloud function that can generate daily advisories, demonstrating a complete end-to-end data engineering and analysis workflow.
 
+## Output Example
+
+![Output](screenshot.png)
+
+
 ## Core Features
 - **Multi-Source Risk Assessment**: Ingests and analyzes data from three independent sources to avoid single-point-of-failure conclusions:
 1. Official Government Flood Zone Maps (.gpkg) (In this case Quebec "Carte Geo Inondation) 
@@ -18,9 +23,6 @@ The system is designed to be fully automated, culminating in a deployment as a s
 - **Automated Reporting & Deployment**:
   The entire workflow can be packaged into a script deployed as a Google Cloud Function. It can be triggered by a scheduler to run automatically, generating a consolidated risk report and emailing it to a user via the SendGrid API.
 
-## Output Example
-
-![Output](screenshot.png)
 
 ## Technology Stack
 Languages: Python
@@ -29,6 +31,7 @@ Core Libraries:
  - Cloud & APIs: earthengine-api (Google Earth Engine), env-canada, requests, google-generativeai
  - Data Handling: Pandas, Numpy
 Data Formats: GeoPackage (.gpkg), GeoTIFF (.tif), JSON, XML
+
 
 ## Future Expansion
 This project serves as a powerful foundation that can be expanded in several ways:
